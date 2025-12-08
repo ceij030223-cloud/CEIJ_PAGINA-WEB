@@ -245,7 +245,7 @@ Ir al perfil
 <tbody>
 <?php foreach($usuarios as $row): ?>
 <tr data-user-id="<?php echo $row['id']; ?>">
-<!--Perfil--  <a href="#">Luis Pablo &amp; Contreras Salomon</a>-->
+<!--Perfil-- -->
 <td>
  <div class="widget-26-job-title">
  <a href="#"><?php echo htmlspecialchars($row['nombre'] . ' ' . $row['apellido']); ?></a>
@@ -271,7 +271,7 @@ Ir al perfil
 </div>
  </td>
 
-<!--BOTONES  <button class="btn-eliminar"style="margin-top: 3px !important;" -->
+<!--BOTONES -->
 <td>
   <div class="sectmod" style=" margin-top: -50px;">
 
@@ -696,4 +696,5 @@ href="?pagina=<?php echo $pagina_actual + 1; ?>&search=<?php echo urlencode($sea
     <script>AOS.init();</script>
     <script src="../js/paneladmins.js?v=1.5"></script>
 </body>
+
 </html>
