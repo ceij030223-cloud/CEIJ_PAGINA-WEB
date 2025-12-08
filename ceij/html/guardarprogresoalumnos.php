@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $certificado_nombre = null;
     if (isset($_FILES['certificado']) && $_FILES['certificado']['error'] === UPLOAD_ERR_OK) {
         $certificado = $_FILES['certificado'];
-        // CAMBIA ESTA LÍNEA - Conservar el nombre original del archivo
+        
         $certificado_nombre = $_FILES['certificado']['name'];
         $upload_dir = 'certificados/';
         
@@ -74,4 +74,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo json_encode(['success' => false, 'message' => 'Método no permitido']);
 }
+
 ?>
