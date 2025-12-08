@@ -54,8 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // URL de recuperación
         $url = "https://ceij.site/html/restablecer.php?token=" . $token;
-        // Ejemplo si usas ngrok o dominio público:
-        // $url = "https://tudominio.com/ceij/html/restablecer.php?token=" . $token;
 
         // Configurar PHPMailer
         $mail = new PHPMailer(true);
