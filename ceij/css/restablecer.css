@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.contenedor {
+  width: 100%;
+  min-height: 100vh; /* 🔹 más flexible que height:100vh */
+  background-image: linear-gradient(135deg, rgba(255, 125, 41, 0.8), rgba(243, 198, 35, 0.8));
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* 🔹 agrega margen interno para pantallas pequeñas */
+}
+
+/* ===== FORMULARIO ===== */
+.form-caja {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-caja h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: orange;
+}
+
+.form-caja p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.inputss {
+  background: #eaeaea;
+  margin: 15px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 18px;
+  font-size: 15px;
+}
+
+.btn-modificar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-modificar button {
+  background: orange;
+  color: #fff;
+  height: 40px;
+  width: 60%;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.4s ease;
+}
+
+.btn-modificar button:hover {
+  background: #ff8c00;
+}
+
+/* ===== ALERTAS ===== */
+.alertageneral {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  inset: 0;
+  display: none; /* oculta la alerta al inicio */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/*alerta de confirmar*/
+.alertcont{
+  width: 90%;
+  max-width: 380px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff7f0;         
+  border-left: 6px solid orange;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 5px;                    /* separación */
+}
+
+
+.alertcont .icon {
+  font-size: 60px;
+  color: #ffb84d;
+  flex-shrink: 0;
+}
+
+.alerta h1 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: orange;
+}
+
+.btn-confirmar {
+  background-color: orange;
+  color: white;
+  margin-right: 10px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+}
+
+.btn-cancelar {
+  background-color: red;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+}
+
+/* ===== Diseño resposinvo ===== */
+
+/* Tabletas */
+@media (max-width: 1024px) {
+  .contenedor {
+    padding: 30px 15px;
+  }
+
+  .form-caja {
+    max-width: 380px;
+    padding: 40px 35px 50px;
+  }
+
+  .form-caja h1 {
+    font-size: 24px;
+  }
+
+  .inputss input {
+    padding: 15px;
+  }
+}
+
+/* 🔹 Teléfonos grandes */
+@media (max-width: 768px) {
+  .form-caja {
+    max-width: 340px;
+    padding: 35px 30px 45px;
+  }
+
+  .form-caja h1 {
+    font-size: 22px;
+  }
+
+  .btn-modificar button {
+    width: 100%;
+  }
+}
+
+/* 🔹 Teléfonos pequeños */
+@media (max-width: 480px) {
+  .form-caja {
+    max-width: 90%;
+    padding: 30px 25px 40px;
+  }
+
+  .form-caja h1 {
+    font-size: 20px;
+  }
+
+  .form-caja p {
+    font-size: 14px;
+  }
+
+  .inputss input {
+    padding: 14px;
+  }
+
+  .btn-modificar button {
+    width: 100%;
+    font-size: 14px;
+  }
+}

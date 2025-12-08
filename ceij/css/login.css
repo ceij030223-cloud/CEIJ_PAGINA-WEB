@@ -1,0 +1,397 @@
+/* ============================
+   ESTILOS GENERALES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #FEF3E2;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor {
+  display: flex;
+  width: 90%;
+  max-width: 850px;
+  min-height: 610px;
+  background: #F97A00;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid rgb(243, 243, 187);
+}
+
+/* === SECCIÓN IZQUIERDA === */
+.bienvenido-section {
+  width: 50%;
+  background: linear-gradient(135deg, #FF7D29, #F3C623);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.bienvenido-section .bienvenido {
+  font-size: 36px;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.bienvenido-section p {
+  font-size: 18px;
+}
+
+.logo_ceij {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* === BOTÓN FLECHA EN BIENVENIDA === */
+.boton-volver {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.boton-volver:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  transform: translateX(-5px);
+  box-shadow: 5px 0 18px rgba(105, 105, 105, 0.8);
+}
+
+/* === FORMULARIOS === */
+.forms-contenedor {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ✅ mantiene el inicio del formulario arriba */
+  transition: height 0.4s ease; /* ✅ transición suave al cambiar altura */
+}
+
+.form-contenedor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-contenedor h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.form-contenedor input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #808e9b;
+  border-radius: 5px;
+}
+
+.form-contenedor input::placeholder {
+  color: #819A91;
+}
+
+.form-contenedor button:not(.boton-flecha) {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: orangered;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+/* === FIX FINAL PARA BOTÓN DE REGRESAR EN RECUPERAR CONTRASEÑA === */
+button.boton-flecha {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  margin-bottom: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  align-self: flex-start !important;
+}
+
+button.boton-flecha i {
+  font-size: 22px !important;
+}
+
+.form-contenedor button:hover {
+  background: orange;
+}
+
+.form-contenedor p {
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+}
+
+.form-contenedor p span {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* === EFECTOS DE TRANSICIÓN ENTRE FORMULARIOS === */
+.login { transform: translateX(0); }
+.registro { transform: translateX(100%); }
+.recuperacionc { transform: translateX(200%); }
+
+.activo-login .login { transform: translateX(0); }
+.activo-login .registro, .activo-login .recuperacionc { transform: translateX(100%); }
+
+.activo-registro .login { transform: translateX(-100%); }
+.activo-registro .registro { transform: translateX(0); }
+
+.activo-recuperacion .login { transform: translateX(-200%); }
+.activo-recuperacion .registro { transform: translateX(200%); }
+.activo-recuperacion .recuperacionc { transform: translateX(0); }
+
+/* === BOTÓN REGRESAR === */
+.boton-flecha {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  font-size: 8px;
+  align-self: flex-start;
+}
+
+.boton-flecha:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  transform: translateX(-5px);
+  box-shadow: 5px 0 18px rgba(105, 105, 105, 0.8);
+}
+
+/* === LOGO SECUNDARIO (solo móvil/tableta) === */
+.logo_ceijmt {
+  display: none;
+}
+
+
+/* ============================
+   MÓVILES Y TABLETAS
+============================ */
+@media (max-width: 1024px) {
+  body {
+    background-color: #FEF3E2;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    min-height: auto;
+    transition: height 0.4s ease;
+    align-items: center;
+  }
+
+  .bienvenido-section {
+    display: none;
+  }
+
+  .forms-contenedor {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: height 0.4s ease;
+  }
+
+  .form-contenedor {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    padding: 15px 25px 15px;
+    justify-content: flex-start;
+    transform: none !important;
+    opacity: 1 !important;
+    display: none;
+  }
+
+  .activo-login .login,
+  .activo-registro .registro,
+  .activo-recuperacion .recuperacionc {
+    display: flex !important;
+  }
+
+  /* Logo visible en móviles/tabletas */
+  .logo_ceijmt {
+    display: block !important;
+    width: 110px;
+    margin: 15px auto 20px;
+  }
+
+  /* Botón casa (index.php) */
+  .boton-volver {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .boton-volver:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+  }
+
+  /* Botón flecha de regresar */
+  .form-contenedor .boton-flecha {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: all 0.3s ease;
+  }
+
+  .form-contenedor .boton-flecha:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+  }
+
+  .form-contenedor .boton-flecha i,
+  .boton-volver i {
+    font-size: 18px;
+  }
+  .form-contenedor {
+    position: relative !important;
+  }
+
+  /* 🔹 Flecha: esquina superior izquierda */
+  .form-contenedor .boton-flecha {
+    position: absolute !important;
+    top: 12px !important;
+    left: 12px !important;
+    margin: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(4px) !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: none !important;
+    z-index: 20 !important;
+  }
+
+  .form-contenedor .boton-flecha i {
+    font-size: 18px !important;
+  }
+
+  /* 🔹 Botón casa: esquina superior derecha */
+  .boton-volver {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important; /* ✅ evita que toque la flecha */
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(4px) !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: none !important;
+    z-index: 20 !important;
+  }
+
+  .boton-volver:hover,
+  .form-contenedor .boton-flecha:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    color: black !important;
+  }
+  .recuperacionc h2 {
+    margin-top: 50px !important; 
+    text-align: center !important;
+    color: white !important;
+  }
+}
+@media (max-width: 400px) {
+  .recuperacionc h2 {
+    margin-top: 60px !important;
+  }
+}

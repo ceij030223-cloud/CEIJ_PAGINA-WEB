@@ -1,0 +1,600 @@
+/*Aqui empieza el index*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+.dropdown-menu {
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown-item{
+  background-color: white;
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu .dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+}
+
+/* Abrir dropdown al pasar el cursor */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* opcional, ajusta espacio si quieres */
+}
+
+/* Evitar que se cierre al mover el mouse sobre el dropdown */
+.dropdown-menu {
+  margin-top: 0;
+}
+
+main {
+    min-height: 100vh;
+    flex: auto;
+}
+
+a {
+    cursor: pointer;
+}
+nav{
+    background-color: #e45e1b;
+}
+.nav-link{
+    color: white;
+}
+
+.bi-bi-list{
+    color: #e45e1b;
+}
+
+.card-header{
+    background-color: #e45e1b;
+    text-align: left;
+
+}
+@media (max-width: 991px) {
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .curso-card .card-footer .d-flex {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 1rem !important;
+    text-align: center;
+  }
+
+}
+footer {
+    background: #e45e1b;
+    color: #fff;
+    padding: 40px 20px; /* más espacio interno */
+    text-align: center;
+    position: relative;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between; /* mantiene izquierda y derecha */
+    align-items: center; /* centra verticalmente */
+    max-width: 1000px; /* más ancho para dar espacio */
+    margin: 0 auto 20px auto; /* centrado horizontal */
+    gap: 80px; /* separación entre secciones */
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra los íconos en su columna */
+    padding: 0 20px; /* separación interna */
+}
+
+.footer-section ul.social_icon {
+    display: flex;
+    gap: 20px; /* separa los íconos entre sí */
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* ligeramente más grande */
+}
+
+@media (max-width: 768px) {
+  /* Ola grande y animada */
+  .waves, .wave {
+    top: -90px !important;           /* Ola más arriba */
+    height: 120px !important;        /* Ola más alta */
+    background-size: 1000px 120px !important;
+    z-index: 0 !important;
+    pointer-events: none;
+    animation: a
+    animatewave 3s linear infinite;
+  }
+  /* Footer separado del contenido */
+  footer {
+    margin-top: 120px !important;    /* Espacio extra arriba del footer */
+    position: relative;
+    z-index: 1;
+  }
+  /* Margen extra antes del footer para que la ola no tape nada */
+  .seccion-apoyo-personalizado,
+  .beneficios,
+  .row:last-child {
+    margin-bottom: 200px !important;
+  }
+}
+
+.footer-section ul.social_icon li a {
+    font-size: 2em; /* tamaño de los íconos */
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-section ul.social_icon li a:hover {
+    transform: scale(1.2); /* aumenta tamaño */
+}
+
+.custom-offcanvas {
+  background-color: #e45e1b;
+  color: white;
+}
+.custom-offcanvas .nav-link {
+  color: white; /* color de los links */
+}
+.custom-offcanvas .nav-link:hover {
+  color: #fff200; /* color al pasar el cursor */
+}
+.custom-offcanvas .dropdown-menu {
+  background-color: #ffffff; /* opcional: menú desplegable dentro del offcanvas */
+}
+
+.filter-item {
+  display: none; /* Todo oculto de entrada */
+}
+/* Estilos copiados de admin.php para total coincidencia */
+body{
+  font-family:Arial,sans-serif;
+  background-color:#f8f9fa;
+  margin:0;padding:0;
+}
+nav.navbar{
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+  background-color:#e45e1b;
+}
+.navbar-nav{
+  display:flex;
+  gap:25px;
+}
+.navbar-nav .nav-link{
+  position:relative;
+  color:white !important;
+  padding-bottom:5px;
+}
+.navbar-nav .nav-link::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height:2px;
+  background-color:#fff;
+  transition:width 0.3s ease;
+}
+/*footer animacion*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 45vh;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #e45e1b;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li {
+    list-style: none;}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../html/wave1.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 3s linear infinite;
+}
+
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+
+}
+
+
+.zoom li a {
+    transition: 1s;
+}
+
+.zoom li a:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+  /* Footer flexible y sin altura fija */
+  .main footer {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px 20px;
+  }
+
+  /* Contenedor de redes y app en columna */
+  .main footer .container.position-relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px; /* muy cerca entre redes y app */
+    width: 100%;
+  }
+
+  /* Redes sociales centradas */
+  .main footer .position-absolute.top-50.start-50.translate-middle {
+    position: static !important;
+    transform: none !important;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Ajuste de redes para alineación y espaciado uniforme */
+  .main footer .social_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* íconos más juntos */
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .main footer .social_icon li {
+    margin: 0;
+  }
+
+  /* App centrada debajo de las redes */
+  .main footer .d-flex.justify-content-center.justify-content-md-end {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Íconos y texto blancos */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end p,
+  .main footer .text-md-end button ion-icon,
+  .main footer .text-md-end button {
+    color: white !important;
+  }
+
+  /* Reducir tamaño íconos en móvil */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end button ion-icon {
+    font-size: 1.3rem;
+  }
+
+  /* Botones de app: ancho ajustado para no desbordar */
+  .main footer .text-md-end .btn {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+.navbar-nav .nav-link:hover::after,.navbar-nav .nav-link.active::after{
+  width:100%;
+}
+.form-card{
+  width:90%;
+  max-width:650px;
+  margin:30px auto;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  overflow:hidden;
+}
+.card-header{
+  background-color:#e45e1b;
+  color:white;
+  padding:15px 20px;
+  text-align:center;
+}
+.card-header h4{
+  margin:0;
+}
+.card-body{
+  padding:20px;font-size:0.95rem;
+}
+
+.input-container{
+  position:relative;
+  margin-bottom:20px;
+}
+.input-container input,.input-container textarea{
+  width:100%;
+  padding:12px;
+  border:2px solid #ccc;
+  border-radius:6px;
+  outline:none;
+  font-size:16px;
+  background:none;
+}
+.input-container label{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:0 5px;
+  font-size:14px;
+  color:#777;
+  pointer-events:none;
+  background:white;
+  transition:transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+.input-container input:focus,.input-container textarea:focus{
+  border-color:#e45e1b;
+  box-shadow:0 0 0 3px rgba(0,81,255,0.15);
+}
+.input-container input:focus+label,.input-container input:not(:placeholder-shown)+label,
+.input-container textarea:focus+label,.input-container textarea:not(:placeholder-shown)+label{
+  transform:translateY(-20px);
+  font-size:12px;
+  color:#e45e1b;
+}
+.input-container-static label{
+  color:#e45e1b;
+  font-weight:bold;
+  font-size:15px;
+  display:block;
+  text-align:center;
+  margin-bottom:8px;
+}
+.sucursal-container .d-flex{
+  justify-content:center;
+}
+.radio-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 15px;
+  border:2px solid #ccc;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+  user-select:none;
+}
+.radio-box input[type="radio"]{
+  display:none;
+}
+.radio-box span{
+  font-size:15px;
+  color:#333;
+}
+.radio-box:hover{
+  border-color:#e45e1b;
+}
+.radio-box input[type="radio"]:checked + span{
+  color:#e45e1b;font-weight:600;
+}
+
+.hora-input{
+  flex:1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size:15px;
+  padding: 8px;
+  outline:none;
+  transition:0.3s;
+  min-width: 120px;
+}
+.hora-input:focus{
+  border-color:#e45e1b;
+  box-shadow:0 0 0 3px rgba(228,94,27,0.2);
+}
+
+.btn-success{
+  background:#e45e1b;
+  border:none;
+  color:white;
+  padding:10px 15px;
+  font-size:15px;
+  border-radius:6px;
+  transition:0.2s;
+}
+
+.btn-success:hover{
+  background:#d64e0f;
+}
+.input-container-static.horario-container {
+  margin-bottom: 20px;
+}
+@media(max-width:576px){
+  .form-card{
+    margin:20px auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .col-12.col-md-6.col-lg-4:last-child {
+    margin-bottom: 20px;
+  }
+}
+/* Título centrado y botón cerrar X en blanco */
+.modal-header {
+    justify-content: center; /* centra el título */
+    position: relative;      /* permite colocar la X en posición absoluta */
+    color: white !important;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    right: 1rem;
+    filter: invert(1); /* hace que la X sea blanca */
+}
+
+/* Radio buttons de modalidad y sucursal */
+.sucursal-container .d-flex {
+    flex-wrap: wrap;            /* si no caben en una fila, pasan a otra */
+    justify-content: center;     /* centrado horizontal */
+    align-items: center;         /* centrado vertical */
+    gap: 15px;                   /* espacio entre opciones */
+}
+
+/* centra el texto de los radio buttons */
+.radio-box {
+    display: flex;
+    align-items: center;         /* centrado vertical del texto */
+    justify-content: center;     /* centrado horizontal */
+}
+
+/* Separación entre Sucursal y Costo total */
+.input-container-static.sucursal-container {
+    margin-bottom: 15px; /* espacio extra antes de costo total */
+}
+.offcanvas .dropdown-menu .dropdown-item {
+  white-space: normal;
+  word-wrap: break-word;
+}
+/* 2. Inputs y labels más pequeños en móviles */
+@media (max-width: 400px) {
+    .input-container input,
+    .input-container textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .input-container label {
+        font-size: 12px;
+    }
+}
+
+/* Cards grid (si hay varias filas) */
+.row.cursos-row {
+  gap: 20px;
+}
+.upload-area {
+  cursor:pointer;
+}
+.upload-area.hover {
+  background:rgba(228, 94, 27, 0.05);
+}
+#preview-agregar img, #preview-editar img {
+  max-height:150px;
+  border-radius:8px;
+}
+/* Contenedor Drag & Drop */
+#drop-agregar,
+#drop-editar {
+  border: 2px dashed #e45e1b !important; /* borde punteado naranja */
+  cursor: pointer;
+}
+
+/* Ícono de nube naranja */
+#drop-agregar i,
+#drop-editar i {
+  color: #e45e1b !important;
+}
+
+/* Cambio visual si el usuario arrastra */
+#drop-agregar.drag-over,
+#drop-editar.drag-over {
+  background-color: rgba(228, 94, 27, 0.05); /* ligero efecto al arrastrar */
+}

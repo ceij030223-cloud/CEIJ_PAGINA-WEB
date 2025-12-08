@@ -1,0 +1,524 @@
+    .curso-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      margin-bottom: 25px;
+      height: 100%;
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    }
+    
+    .curso-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+    }
+    
+    .curso-card .card-img-top {
+  width: 100%;
+  height: auto; /* la imagen conserva proporción natural */
+  aspect-ratio: 16/9; /* proporción panorámica */
+  object-fit: cover; /* rellena el espacio sin deformarse */
+  transition: transform 0.5s ease;
+  border-bottom: 4px solid #e45e1b;
+}
+
+    
+    .curso-card:hover .card-img-top {
+      transform: scale(1.08);
+    }
+    
+    
+    .curso-card .card-body {
+      padding: 1.5rem;
+      position: relative;
+    }
+    
+    .curso-card .card-title {
+      color: #2c3e50;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      min-height: 60px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .curso-card .card-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, #e45e1b, #e45e1b);
+      border-radius: 3px;
+    }
+    
+    .curso-card .card-text {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .curso-card .card-footer {
+      background: linear-gradient(135deg, #e45e1b, #e45e1b);
+      color: white;
+      font-weight: 500;
+      border-top: none;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .curso-card .card-footer small {
+      display: flex;
+      align-items: center;
+    }
+  
+    .curso-card .card-footer i {
+      margin-right: 6px;
+      font-size: 1rem;
+    }
+    /* Agregado: Fuente y estilo para nav links */
+     /* Navbar con línea animada y separación */
+    nav.navbar {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      
+    }
+
+    .navbar-nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white !important;
+      padding-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+    
+
+    .badge-curso {
+      position: absolute;
+      top: -15px;
+      right: 15px;
+      color: white;
+      font-weight: 700;
+      padding: 0.4em 0.8em;
+      border-radius: 50px;
+      font-size: 0.75em;
+      box-shadow: 0 4px 8px rgba(255,107,53,0.3);
+      z-index: 2;
+    }
+   
+
+    @media (max-width: 768px) {
+      .curso-card .card-title {
+        min-height: auto;
+      }
+      
+    .curso-card .card-img-top {
+    aspect-ratio: 4/3; /* en móvil un poco más cuadrada */
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 45vh;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #e45e1b;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li {
+    list-style: none;}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../html/wave1.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 3s linear infinite;
+}
+
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+
+}
+
+
+.zoom li a {
+    transition: 1s;
+}
+
+.zoom li a:hover {
+    transform: scale(1.1);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+.dropdown-menu {
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown-item{
+  background-color: white;
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 768px) {
+
+  /* Footer flexible y sin altura fija */
+  .main footer {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px 20px;
+  }
+
+  /* Contenedor de redes y app en columna */
+  .main footer .container.position-relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px; /* muy cerca entre redes y app */
+    width: 100%;
+  }
+
+  /* Redes sociales centradas */
+  .main footer .position-absolute.top-50.start-50.translate-middle {
+    position: static !important;
+    transform: none !important;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Ajuste de redes para alineación y espaciado uniforme */
+  .main footer .social_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* íconos más juntos */
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .main footer .social_icon li {
+    margin: 0;
+  }
+
+  /* App centrada debajo de las redes */
+  .main footer .d-flex.justify-content-center.justify-content-md-end {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Íconos y texto blancos */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end p,
+  .main footer .text-md-end button ion-icon,
+  .main footer .text-md-end button {
+    color: white !important;
+  }
+
+  /* Reducir tamaño íconos en móvil */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end button ion-icon {
+    font-size: 1.3rem;
+  }
+
+  /* Botones de app: ancho ajustado para no desbordar */
+  .main footer .text-md-end .btn {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu .dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+}
+
+/* Abrir dropdown al pasar el cursor */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* opcional, ajusta espacio si quieres */
+}
+
+/* Evitar que se cierre al mover el mouse sobre el dropdown */
+.dropdown-menu {
+  margin-top: 0;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    cursor: pointer;
+}
+nav{
+    background-color: #e45e1b;
+}
+.nav-link{
+    color: white;
+}
+
+.bi-bi-list{
+    color: #e45e1b;
+}
+
+.card-header{
+    background-color: #e45e1b;
+    text-align: left;
+}
+@media (max-width: 991px) {
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+  .curso-card .card-footer .d-flex {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 1rem !important;
+    text-align: center;
+  }
+}
+.btn-detalles {
+  background-color: #e45e1b; /* naranja */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-detalles:hover {
+  background-color: #e05c10; /* naranja más oscuro */
+  transform: scale(1.05); /* agrandar un poquito */
+  cursor: pointer;
+  color: white; 
+}
+footer {
+    background: #e45e1b;
+    color: #fff;
+    padding: 30px 50px; /* más espacio arriba y abajo */
+    text-align: center;
+    position: relative;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between; /* mantiene izquierda y derecha */
+    align-items: center; /* centra verticalmente */
+    max-width: 1000px; /* más ancho para dar espacio */
+    margin: 0 auto 20px auto; /* centrado horizontal */
+    gap: 80px; /* separación entre secciones */
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra los íconos en su columna */
+    padding: 0 20px; /* separación interna */
+}
+
+.footer-section ul.social_icon {
+    display: flex;
+    gap: 20px; /* separa los íconos entre sí */
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* ligeramente más grande */
+}
+
+@media (max-width: 768px) {
+  /* Ola grande y animada */
+  .waves, .wave {
+    top: -90px !important;           /* Ola más arriba */
+    height: 120px !important;        /* Ola más alta */
+    background-size: 1000px 120px !important;
+    z-index: 0 !important;
+    pointer-events: none;
+    animation: animatewave 3s linear infinite;
+  }
+}
+
+.footer-section ul.social_icon li a {
+    font-size: 2em; /* tamaño de los íconos */
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-section ul.social_icon li a:hover {
+    transform: scale(1.2); /* aumenta tamaño */
+}
+
+.custom-offcanvas {
+  background-color: #e45e1b;
+  color: white;
+}
+.custom-offcanvas .nav-link {
+  color: white; /* color de los links */
+}
+.custom-offcanvas .nav-link:hover {
+  color: #fff200; /* color al pasar el cursor */
+}
+.custom-offcanvas .dropdown-menu {
+  background-color: #ffffff; /* opcional: menú desplegable dentro del offcanvas */
+}
+
+.filter-item {
+  display: none; /* Todo oculto de entrada */
+}
+@media (max-width: 992px) {
+/* Aumentar un poco la separación antes del footer */
+   .container:last-child {
+    margin-bottom: 250px !important; /* deja respirar el contenido */
+  }
+}
+/* Cards responsive */
+@media (max-width: 767.98px) {
+  .curso-card {
+    height: auto; /* evita estiramiento en móviles */
+  }
+  .curso-card .card-title {
+    word-break: break-word; /* títulos largos van a la siguiente línea */
+  }
+  main .container {
+    margin-bottom: 3rem; 
+  }
+}
+
+/* Dropdown offcanvas */
+.offcanvas .dropdown-menu .dropdown-item {
+  white-space: normal;
+  word-wrap: break-word;
+}

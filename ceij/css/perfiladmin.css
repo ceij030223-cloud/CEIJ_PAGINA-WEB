@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f6fa;
+}
+
+.perfil-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(135deg, #FF7D29, #F3C623);
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.foto-usuario {
+  font-size: 90px;
+  margin-right: 20px;
+  background: white;
+  color: #FF7D29;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-usuario h2 {
+  margin: 10px 0 5px 0;
+  font-size: 28px;
+}
+
+.info-usuario p {
+  font-size: 16px;
+}
+
+/* CONTENIDO */
+.contenido {
+  background: white;
+  border-radius: 12px 12px 0 0;
+  margin-top: -20px;
+  padding: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn.activo {
+  border-color:  #FF7D29;
+  color:  #FF7D29;
+  font-weight: 600;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 10px;
+}
+
+.tab-content.activo {
+  display: block;
+}
+
+/* PERFIL */
+.info-grid p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+  .foto-usuario {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/*Boton de modificar datos de alumno*/
+.btn-modificar {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: #6c757d;
+    color: white;
+}
+
+.btn-modificar:hover {
+    background: #5a6268;
+}
+/*Boton de subir y cambiar datos*/
+.btn-cambiar {
+outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: black;
+    color: white;
+}
+.btn-cambiar:hover {
+background-color: green;
+}
+
+
+/*Boton de cancelar*/
+.btn-cancelar {
+ outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: black;
+    color: white;
+}
+.btn-cancelar:hover {
+ background-color: red;
+}
+/* Botón de regreso*/
+.boton-flecha {
+    width: auto;
+    height: 45px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+   padding: 0 15px;
+}
+
+.boton-flecha:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  transform: translateX(-5px);
+  box-shadow: 5px 0px 18px rgba(105, 105, 105, 0.8);
+}
+.boton-flecha .fa-house {
+    display: none;
+}
+.boton-cerrar {
+    width: auto;
+    height: 45px;
+    border-radius: 25px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    padding: 0 15px;
+}
+
+.boton-cerrar:hover {
+    background-color: #c82333;
+    transform: translateX(5px);
+    box-shadow: -5px 0px 18px rgba(120, 69, 2, 0.8); /*-5px 0px 18px rgba(220, 53, 69, 0.8);*/
+}
+/* Móvil */
+@media (max-width: 768px) {  
+.boton-cerrar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 0;
+    }
+    .boton-cerrar i {
+        font-size: 24px;
+    }
+    .boton-cerrar span {
+        display: none;
+    }
+
+    .boton-flecha .fa-arrow-left, .boton-flecha span {
+        display: none;
+    }
+}
+@media (max-width: 768px) {  
+  .boton-flecha{
+    width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 0;
+  }
+    .boton-flecha .fa-house {
+        display: block !important;
+    }
+     .boton-flecha .fa-house {
+        font-size: 24px;
+    }
+}

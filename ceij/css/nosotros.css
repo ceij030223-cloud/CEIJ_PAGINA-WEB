@@ -1,0 +1,441 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+.dropdown-menu {
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown-item{
+  background-color: white;
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 768px) {
+
+  /* Footer flexible y sin altura fija */
+  .main footer {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px 20px;
+  }
+
+  /* Contenedor de redes y app en columna */
+  .main footer .container.position-relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px; /* muy cerca entre redes y app */
+    width: 100%;
+  }
+
+  /* Redes sociales centradas */
+  .main footer .position-absolute.top-50.start-50.translate-middle {
+    position: static !important;
+    transform: none !important;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Ajuste de redes para alineación y espaciado uniforme */
+  .main footer .social_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* íconos más juntos */
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .main footer .social_icon li {
+    margin: 0;
+  }
+
+  /* App centrada debajo de las redes */
+  .main footer .d-flex.justify-content-center.justify-content-md-end {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Íconos y texto blancos */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end p,
+  .main footer .text-md-end button ion-icon,
+  .main footer .text-md-end button {
+    color: white !important;
+  }
+
+  /* Reducir tamaño íconos en móvil */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end button ion-icon {
+    font-size: 1.3rem;
+  }
+
+  /* Botones de app: ancho ajustado para no desbordar */
+  .main footer .text-md-end .btn {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu .dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+}
+.offcanvas .dropdown-menu .dropdown-item {
+  white-space: normal;
+  word-wrap: break-word;
+}
+/* Abrir dropdown al pasar el cursor */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* opcional, ajusta espacio si quieres */
+}
+
+/* Evitar que se cierre al mover el mouse sobre el dropdown */
+.dropdown-menu {
+  margin-top: 0;
+}
+
+main {
+  flex: 1 0 auto;
+  margin-bottom: 40px; 
+}
+
+a {
+    cursor: pointer;
+}
+nav{
+    background-color: #e45e1b;
+}
+.nav-link{
+    color: white;
+}
+
+.bi-bi-list{
+    color: #e45e1b;
+}
+
+.card-header{
+    background-color: #e45e1b;
+    text-align: left;
+
+}
+
+
+@media (max-width: 991px) {
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .curso-card .card-footer .d-flex {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 1rem !important;
+    text-align: center;
+  }
+
+}
+footer {
+    background: #e45e1b;
+    color: #fff;
+    padding: 30px 50px; /* más espacio arriba y abajo */
+    text-align: center;
+    position: relative;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between; /* mantiene izquierda y derecha */
+    align-items: center; /* centra verticalmente */
+    max-width: 1000px; /* más ancho para dar espacio */
+    margin: 0 auto 20px auto; /* centrado horizontal */
+    gap: 80px; /* separación entre secciones */
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra los íconos en su columna */
+    padding: 0 20px; /* separación interna */
+}
+
+.footer-section ul.social_icon {
+    display: flex;
+    gap: 20px; /* separa los íconos entre sí */
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* ligeramente más grande */
+}
+
+/* Responsivo: apila las secciones en móviles */
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.footer-section ul.social_icon li a {
+    font-size: 2em; /* tamaño de los íconos */
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-section ul.social_icon li a:hover {
+    transform: scale(1.2); /* aumenta tamaño */
+    
+}
+
+.custom-offcanvas {
+  background-color: #e45e1b;
+  color: white;
+}
+.custom-offcanvas .nav-link {
+  color: white; /* color de los links */
+}
+.custom-offcanvas .nav-link:hover {
+  color: #fff200; /* color al pasar el cursor */
+}
+.custom-offcanvas .dropdown-menu {
+  background-color: #ffffff; /* opcional: menú desplegable dentro del offcanvas */
+}
+
+.filter-item {
+  display: none; /* Todo oculto de entrada */
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background: #f9faff;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-custom {
+  background-color: #fff;
+  border-radius: 12px;
+  border-left: 5px solid #e45e1b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-custom h3 {
+  display: flex;
+  align-items: center;
+  color: #e45e1b;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.card-custom h3 i {
+  margin-right: 10px;
+}
+
+.card-custom p {
+  color: #444;
+  font-size: 15px;
+  text-align: justify;
+  margin: 0;
+}
+
+
+ /* Navbar con línea animada y separación */
+    nav.navbar {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white !important;
+      padding-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 45vh;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  width: 100%;
+  background: #e45e1b;
+  min-height: 160px; /* un poco más alto para que entre todo */
+  padding: 30px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li {
+    list-style: none;}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Ola encima del footer */
+footer .wave {
+  position: absolute;
+  top: -120px; /* antes -80px, subimos la ola */
+  left: 0;
+  width: 100%;
+  height: 140px; /* un poco más chica */
+  background: url(../html/wave1.png);
+  background-size: 1000px 140px;
+  z-index: 0;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    animation: animatewave 3s linear infinite;
+}
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+
+}
+
+.zoom li a {
+    transition: 1s;
+}
+
+.zoom li a:hover {
+    transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE FIX en móviles ===== */
+@media (max-width: 768px) {
+  main {
+    margin-bottom: 95px; /* menos espacio en móvil */
+  }
+
+  footer {
+    padding: 25px 15px 20px;
+  }
+
+  footer .wave {
+    top: -90px; /* se pega más en pantallas chicas */
+    height: 120px;
+    background-size: 1000px 120px;
+  }
+}

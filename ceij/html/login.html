@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link href="../css/login.css?v=4.3" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../icon/ceijicon.ico">
+</head>
+<body>
+    <div class="contenedor activo-login">
+        <!-- Botón para volver al inicio -->
+        <button class="boton-volver" onclick="window.location.href='index.php'">
+            <i class="fa-solid fa-house fa-2x"></i>
+        </button>
+        <!-- Sección de bienvenida -->
+        <div class="bienvenido-section">
+
+            <h1 class="bienvenido">¡Bienvenido!</h1>
+            <img src="../img/sin fondo.png" alt="Logo CEIJ" class="logo_ceij">
+            <p>Únete a nuestros cursos</p>
+        </div>
+
+        <div class="forms-contenedor">
+
+            <!-- Sección de inicio de sesión -->
+            <div class="form-contenedor login">
+                <img src="../img/sin fondo.png" alt="Logo CEIJ" class="logo_ceijmt">
+                <h2>Inicio de sesión</h2>
+                <form action="login.php" method="POST">
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="password" name="password" minlength="8" maxlength="15" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-ir" style="color: white;">Ingresar</button>
+                </form>
+                <p>
+                    ¿No tienes cuenta? 
+                    <span class="switch-form">Registrarse</span><br><br>
+                    ¿Olvidaste tu contraseña?<br>
+                    <span class="switch-form recuperacion-link">Recuperar contraseña</span>
+                </p>
+            </div>
+
+            <!-- Sección de registro -->
+            <div class="form-contenedor registro">
+                <img src="../img/sin fondo.png" alt="Logo CEIJ" class="logo_ceijmt">
+                <h2>Crear una cuenta</h2>
+                <form action="registro.php" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellido" placeholder="Apellidos" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="tel" name="telefono" minlength="10" maxlength="10" placeholder="Teléfono" required>
+                    <input type="password" name="password" minlength="8" maxlength="15" placeholder="Contraseña" required>
+                    <input type="password" name="confirmar" minlength="8" maxlength="15" placeholder="Confirmar contraseña" required>
+                    <button type="submit" class="btn-ir" style="color: white;">Registrarse</button>
+                </form>
+                <p>
+                    ¿Tienes cuenta?
+                    <span class="switch-form">Iniciar sesión</span>
+                </p>
+            </div>
+
+            <!-- Sección de recuperación de contraseña -->
+            <div class="form-contenedor recuperacionc">
+                <button id="bt-regresar" class="boton-flecha regresar-btn">
+                    <i class="fa-solid fa-arrow-left fa-3x"></i>
+                </button>
+                <h2>¿Olvidó su contraseña?</h2>
+                <p>Ingresa tu dirección de correo electrónico para recibir instrucciones para crear una nueva contraseña.</p>
+                <form action="recuperar.php" method="POST">
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <button type="submit" style="color: white;">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/login.js?v=2.1"></script>
+</body>
+</html>

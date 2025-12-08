@@ -1,0 +1,755 @@
+
+    /* Navbar con línea animada y separación */
+    nav.navbar {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white !important;
+      padding-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+    
+  .ubicaciones {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.ubicacion p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+
+/* Agrega esto a tu <style> */
+
+.carousel-item h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+.carousel-item .lead {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Modifica tus estilos de beneficios */
+.col-md-4.mb-4 {
+  padding: 30px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.col-md-4.mb-4 i {
+  transition: all 0.3s ease;
+}
+
+.col-md-4.mb-4:hover{
+  transform: translateY(-10px) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  background: #f8f9fa;
+}
+
+.col-md-4.mb-4:hover i {
+  transform: scale(1.2);
+  color: #e45e1b !important;
+}
+
+/*footer animacion*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 45vh;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #e45e1b;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li {
+    list-style: none;}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../html/wave1.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 3s linear infinite;
+}
+
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+
+}
+
+
+.zoom li a {
+    transition: 1s;
+}
+
+.zoom li a:hover {
+  transform: scale(1.1);
+}
+.list-group-item {
+  border: none;
+  padding: 14px 16px;
+  transition: background 0.25s;
+}
+.list-group-item:hover {
+  background: #f8f9fb;
+}
+/* Separar botones y permitir que bajen si no hay espacio */
+.list-group-item div {
+  display: flex;
+  gap: 0.5rem; /* separación entre botones */
+  flex-wrap: wrap; /* que se acomoden verticalmente en pantallas pequeñas */
+}
+
+/* Evitar que el nombre de la sección se corte raro */
+.list-group-item span {
+  word-break: break-word;
+}
+@media (max-width: 768px) {
+
+  /* Footer flexible y sin altura fija */
+  .main footer {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px 20px;
+  }
+
+  /* Contenedor de redes y app en columna */
+  .main footer .container.position-relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px; /* muy cerca entre redes y app */
+    width: 100%;
+  }
+
+  /* Redes sociales centradas */
+  .main footer .position-absolute.top-50.start-50.translate-middle {
+    position: static !important;
+    transform: none !important;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Ajuste de redes para alineación y espaciado uniforme */
+  .main footer .social_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* íconos más juntos */
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .main footer .social_icon li {
+    margin: 0;
+  }
+
+  /* App centrada debajo de las redes */
+  .main footer .d-flex.justify-content-center.justify-content-md-end {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Íconos y texto blancos */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end p,
+  .main footer .text-md-end button ion-icon,
+  .main footer .text-md-end button {
+    color: white !important;
+  }
+
+  /* Reducir tamaño íconos en móvil */
+  .main footer .social_icon li a ion-icon,
+  .main footer .text-md-end button ion-icon {
+    font-size: 1.3rem;
+  }
+
+  /* Botones de app: ancho ajustado para no desbordar */
+  .main footer .text-md-end .btn {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+/*Aqui empieza el index*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+.dropdown-menu {
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown-item{
+  background-color: white;
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu .dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+}
+
+/* Abrir dropdown al pasar el cursor */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* opcional, ajusta espacio si quieres */
+}
+
+/* Evitar que se cierre al mover el mouse sobre el dropdown */
+.dropdown-menu {
+  margin-top: 0;
+}
+
+main {
+  flex: 1;
+  padding-top: 30px;       /* espacio para que no quede pegado al navbar */
+  background-color: #ffffff; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card-header {
+  background-color: #e45e1b !important;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 14px 18px;
+}
+
+a {
+    cursor: pointer;
+}
+nav{
+    background-color: #e45e1b;
+}
+.nav-link{
+    color: white;
+}
+
+.bi-bi-list{
+    color: #e45e1b;
+}
+h2.text-primary {
+  color: #e45e1b !important;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+footer {
+    background: #e45e1b;
+    color: #fff;
+    padding: 30px 50px; /* más espacio arriba y abajo */
+    text-align: center;
+    position: relative;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between; /* mantiene izquierda y derecha */
+    align-items: center; /* centra verticalmente */
+    max-width: 1000px; /* más ancho para dar espacio */
+    margin: 0 auto 20px auto; /* centrado horizontal */
+    gap: 80px; /* separación entre secciones */
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra los íconos en su columna */
+    padding: 0 20px; /* separación interna */
+}
+
+.footer-section ul.social_icon {
+    display: flex;
+    gap: 20px; /* separa los íconos entre sí */
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* ligeramente más grande */
+}
+
+@media (max-width: 768px) {
+  /* Ola grande y animada */
+  .waves, .wave {
+    top: -90px !important;           /* Ola más arriba */
+    height: 120px !important;        /* Ola más alta */
+    background-size: 1000px 120px !important;
+    z-index: 0 !important;
+    pointer-events: none;
+    animation: animatewave 3s linear infinite;
+  }
+  /* Footer separado del contenido */
+  footer {
+    margin-top: 120px !important;    /* Espacio extra arriba del footer */
+    position: relative;
+    z-index: 1;
+  }
+  /* Margen extra antes del footer para que la ola no tape nada */
+  .seccion-apoyo-personalizado,
+  .beneficios,
+  .row:last-child {
+    margin-bottom: 230px !important;
+  }
+}
+
+.footer-section ul.social_icon li a {
+    font-size: 2em; /* tamaño de los íconos */
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-section ul.social_icon li a:hover {
+    transform: scale(1.2); /* aumenta tamaño */
+}
+
+.custom-offcanvas {
+  background-color: #e45e1b;
+  color: white;
+}
+.custom-offcanvas .nav-link {
+  color: white; /* color de los links */
+}
+.custom-offcanvas .nav-link:hover {
+  color: #fff200; /* color al pasar el cursor */
+}
+.custom-offcanvas .dropdown-menu {
+  background-color: #ffffff; /* opcional: menú desplegable dentro del offcanvas */
+}
+
+.filter-item {
+  display: none; /* Todo oculto de entrada */
+}
+.offcanvas .dropdown-menu .dropdown-item {
+  white-space: normal;
+  word-wrap: break-word;
+}
+body { 
+  background-color: #f8f9fa; 
+}
+/* Tarjetas / formularios */
+.card, .form-container {
+  background-color: #ffffff;
+  color: #212529;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Scrollbar naranja en listado de secciones */
+.card-body {
+  max-height: 300px; /* ajusta según tu diseño */
+  overflow-y: auto;
+}
+
+/* Firefox */
+.card-body {
+  scrollbar-width: thin;
+  scrollbar-color: #e45e1b #f1f1f1; /* thumb color, track color */
+}
+
+/* Chrome, Edge, Safari */
+.card-body::-webkit-scrollbar {
+  width: 10px;
+}
+.card-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+.card-body::-webkit-scrollbar-thumb {
+  background-color: #e45e1b;
+  border-radius: 8px;
+  border: 2px solid #f1f1f1;
+}
+.btn i {
+  vertical-align: middle; 
+}
+.imagen-mini {
+  height: 90px;
+  object-fit: cover; 
+  border-radius: 6px; 
+}
+.img-container {
+  position: relative; 
+  display: inline-block; 
+  margin: 4px; 
+}
+.img-container img,
+.img-container video {
+    width: 120px;   /* ancho fijo */
+    height: 90px;   /* alto fijo */
+    object-fit: cover; /* recorta centrado sin deformar */
+    border-radius: 6px;
+}
+.img-container {
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    vertical-align: top; /* evita que algunas tarjetas se desalineen */
+}
+.img-container input[type="checkbox"] {
+    top: 5px;
+    left: 5px;
+}
+.img-container .btn-menu {
+    top: 5px;
+    right: 5px;
+}
+/* Botones de advertencia / peligro */
+.btn-warning { 
+  background-color: #ffc107;
+   color: #212529; 
+}
+.btn-danger  {
+  background-color: #dc3545;
+   color: #ffffff; 
+}
+.btn-eliminar-img {
+  position: absolute; top: 5px; right: 5px;
+  background-color: rgba(255,0,0,0.7);
+  border: none; color: white; border-radius: 50%;
+  padding: 3px 6px; cursor: pointer;  
+}
+
+/* Botones principales */
+.btn-primary {
+  background-color: #e45e1b;
+  color: #ffffff;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #f06b3a;
+}
+.upload-area {
+  border: 2px dashed #e45e1b !important;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+.upload-area i.bi-cloud-arrow-up {
+    color: #e45e1b; /* mismo naranja de tu header */
+}
+.upload-area:hover {
+  background-color: #fff5ec;
+  border-color: #ffa455;
+}
+.upload-area.dragover {
+  background-color: #e9f5ff;
+  border-color: #0d6efd;
+}
+.preview-item {
+  position: relative;
+}
+.preview-item img,
+.preview-item video {
+  height: 80px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.progress {
+  height: 8px;
+  background-color: #e9ecef;
+}
+.progress-bar {
+  background-color: #0d6efd;
+  font-size: 0.7rem;
+  text-align: center;
+  color: white;
+}
+.menu-opciones {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; /* apila las opciones verticalmente */
+  padding: 0.25rem; /* un poco de espacio interno */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  z-index: 100;
+}
+.menu-opciones .btn, .menu-opciones a {
+  display: block; /* fuerza que ocupe todo el ancho del contenedor */
+  width: 100%;    /* ancho completo del menú */
+  margin-bottom: 0.25rem; /* espacio entre opciones */
+  padding: 0.25rem 0.5rem; /* opcional: más cómodo para clic */
+  text-align: center;
+}
+.menu-opciones .btn:last-child,
+.menu-opciones a:last-child {
+  margin-bottom: 0; /* eliminar margen del último */
+}
+.imagen-mini.video-mini {
+  pointer-events: none; /* Desactiva interacción con el video miniatura */
+}
+.modal-header {
+    background-color: #e45e1b; /* naranja */
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.modal-header .btn-close {
+    position: absolute;
+    right: 1rem;
+    filter: invert(1); /* X blanca */
+}
+/* Botones secundarios */
+.btn-secondary {
+  background-color: #e45e1b;
+  color: #ffffff;
+  border: none;
+}
+.btn-secondary:hover {
+  background-color: #f06b3a;
+}
+/* Fondos de secciones */
+.section {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+/* Enlaces y acentos */
+a, .accent {
+  color: #1b66e4;
+}
+a:hover {
+  color: #2a78f0;
+}
+.d-flex.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centra todo el contenido */
+    gap: 10px; /* espacio entre imágenes/videos */
+}
+/* Tablets */
+@media (max-width: 768px) {
+    .img-container img,
+    .img-container video {
+        width: 150px;  /* más ancho */
+        height: 120px; /* más alto */
+    }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+    .img-container img,
+    .img-container video {
+        width: 120px;
+        height: 100px;
+    }
+}
+/* Ajustes para móviles y tabletas */
+@media (max-width: 768px) {
+  
+  /* Contenedor del nombre y botones */
+  .list-group-item {
+    display: flex;
+    flex-direction: column; /* texto arriba, botones abajo si no caben */
+    align-items: flex-start; /* texto alineado a la izquierda */
+    gap: 5px;
+  }
+
+  /* Nombre de la sección */
+  .list-group-item span {
+    text-align: left;
+    word-break: break-word;
+    display: block;
+  }
+
+  /* Contenedor de botones */
+  .list-group-item div {
+    display: flex;
+    justify-content: center; /* centra los iconos horizontalmente */
+    gap: 10px; /* separación entre iconos */
+    flex-wrap: nowrap; /* mantiene los iconos en una línea */
+    width: 100%;
+  }
+
+  /* Ocultar texto de los botones, mostrar solo iconos */
+  .list-group-item div button span {
+    display: none;
+  }
+
+  /* Asegurar que botones no ocupen todo el ancho */
+  .list-group-item div button {
+    padding: 6px 8px;
+    min-width: auto;
+  }
+  main {
+    padding-bottom: 240px; /* espacio para footer + ola */
+  }
+}
+
+@media (max-width: 576px) {
+  .list-group-item div button span { display: none; }
+}
+@media (max-width: 991px) {
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .curso-card .card-footer .d-flex {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 1rem !important;
+    text-align: center;
+  }
+  /* Para móviles y tabletas */
+  main {
+    padding-bottom: 280px; /* ajusta según altura del footer + ola */
+  }
+
+  .waves, .wave {
+    height: 120px !important;   /* altura de la ola */
+    background-size: 1000px 120px !important;
+  }
+
+  footer {
+    margin-top: 0 !important;  /* deja que el padding del main se encargue del espacio */
+    position: relative;
+    z-index: 1;
+  }
+}
