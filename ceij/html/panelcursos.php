@@ -189,7 +189,7 @@ Ir al perfil
 <tbody>
 <?php foreach($usuarios as $row): ?>
 <tr data-user-id="<?php echo $row['id']; ?>">
-<!--Perfil--  <a href="#">Luis Pablo &amp; Contreras Salomon</a>-->
+<!--Perfil -->
 <td>
  <div class="widget-26-job-title">
  <a href="#"><?php echo htmlspecialchars($row['nombre'] . ' ' . $row['apellido']); ?></a>
@@ -309,7 +309,7 @@ color: #333; font-size: 0.9rem; padding:5px 10px; border-radius:5px;" disabled>
 <div id="pdfPreview_<?php echo $row['id']; ?>" class="pdf-preview"
 style="margin-top:2px; text-align: center; text-decoration:none; cursor:pointer; color:blue !important;">
 <?php 
-// Mostrar el nombre del PDF y el estado NO es Completado      text-decoration:underline; font-weight: bold;
+// Mostrar el nombre del PDF y el estado NO es Completado   
 if (!empty($row['certificado']) && $row['estado'] !== 'Completado') {
  echo '<span style="">' . htmlspecialchars($row['certificado']) . '</span>';
 
@@ -578,3 +578,4 @@ elseif (!empty($row['certificado']) && $row['estado'] === 'Completado') {
 </body>
 
 </html>
+
